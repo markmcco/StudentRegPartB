@@ -28,7 +28,7 @@ public class Driver {
         courseStudents.add(new Student("Eoin", "143483778"));
         courseStudents.add(new Student("Josh", "143293683"));
 
-        // add modules to course
+        // add modules
         courseModules.add(new Module("ct417"));
         courseModules.add(new Module("ct404"));
         courseModules.add(new Module("ct416"));
@@ -40,15 +40,18 @@ public class Driver {
         Course csit;
         csit = new Course("Computer Science & Information Technology", "BCT" , start, end);
         
+        // add modules to course
         csit.setModules(courseModules);
 
+        // register student to course
         for(Student s : courseStudents) csit.registerStudent(s);
 
+        // print details to console
         for(Student s : courseStudents) {
             System.out.println(
-                    "Student Details:\n----------------\n" + s +
-                    "\nCourse Details: " + s.getCourse() +
-                    "\nModules: " + s.getModules() + "\n"
+                    "Student:" + s +
+                    "\nModules: " + s.getModules() +
+                    "\nCourse: " + s.getCourse() + "\n"
             );
         }
     }
