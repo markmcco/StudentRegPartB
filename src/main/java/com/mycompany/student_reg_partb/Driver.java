@@ -39,6 +39,7 @@ public class Driver {
         
         Course csit;
         csit = new Course("Computer Science & Information Technology", "BCT" , start, end);
+        
         csit.setModules(courseModules);
 
         for(Student s : courseStudents) csit.registerStudent(s);
