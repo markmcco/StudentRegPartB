@@ -1,0 +1,15 @@
+## YAML Template.
+---
+language: java
+
+jdk: openjdk8
+
+after_success:
+    - mvn test
+    - mvn clean
+    - mvn package
+    
+notifications:
+    email:
+        recipients:
+            - m.mcconn1@nuigalway.ie
